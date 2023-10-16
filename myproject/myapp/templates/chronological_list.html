@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronological List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        label,
+        input {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chronological Event List</h1>
+    <ul class="record-list">
+        {% for event in events %}
+            <li class="record">
+                <h2>{{ event.event_name }}</h2>
+                <p>Date: {{ event.event_date }}</p>
+                <p>Description: {{ event.description }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
