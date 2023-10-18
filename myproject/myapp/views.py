@@ -9,7 +9,7 @@ def my_view(request):
     if request.method == 'POST':
         user_data = request.POST.get('input_field')
         if user_data:
-            return redirect(reverse('myapp:success_page'))
+            return redirect(reverse('chronological_list'))
     return render(request, 'my_template.html')
 
 def get_single_record(request, record_id):
